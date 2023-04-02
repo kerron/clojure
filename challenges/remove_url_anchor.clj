@@ -5,3 +5,5 @@
   (-> s
       (clojure.string/split #"#")
       first))
+
+(remove-url-anchor "hello world#can't touch this") ;; => "hello world"
