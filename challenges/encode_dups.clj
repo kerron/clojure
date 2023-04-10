@@ -18,7 +18,9 @@
   (let [freq-map (->> input
                       str/lower-case
                       frequencies)
-        lowercase-input (str/lower-case input)]
-    (apply str (mapv #(if (> (get freq-map %) 1) ")" "(") lowercase-input))))
+        lwr-input (str/lower-case input)]
+    (->> lwr-input
+         (map #(if (> (get freq-map %) 1) ")" "("))
+         (str/join))))
 
 (encode-dups "kerron") ;; => "(())(("
