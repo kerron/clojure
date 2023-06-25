@@ -11,3 +11,5 @@
     (if (> sum 9)
       (recur sum)
       sum)))
+
+(digital-root 123456)  ;; => 3
