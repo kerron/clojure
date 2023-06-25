@@ -6,7 +6,7 @@
 
 (ns digital-root)
 
-(defn digit-root [n]
+(defn digital-root [n]
   (let [sum (reduce + (map #(Character/digit % 10) (str n)))]
     (if (> sum 9)
       (recur sum)
